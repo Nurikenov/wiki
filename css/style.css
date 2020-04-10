@@ -1,0 +1,30 @@
+.header {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    background: yellow;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+h1 {}
+
+@media (max-width: 500px) {
+    .header {
+        background: green;
+    }
+}
+
+
+/* style helpers */
+
+.bg-blue {
+    background: #0a6ede;
+}
+
+.text-center {
+    text-align: center;
+}

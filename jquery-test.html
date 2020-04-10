@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>wiki ibec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<button class="ddd">
+			Нажми меня!
+		</button>
+
+
+		<div class="modal hidden" id="modal">
+			<h2>Привет как твое имя?</h2>
+
+			<input type="text" name="esim">
+
+			<div class="btn">
+				сохранить
+			</div>
+		</div>
+	</div>
+
+
+<style type="text/css">
+	body {
+		margin: 0;
+	}
+    .wrapper {
+    	width: 100vw;
+    	height: 100vh;
+    	background: #ccc;
+    	display: -webkit-flex;
+    	display: -moz-flex;
+    	display: -ms-flex;
+    	display: -o-flex;
+    	display: flex;
+    	justify-content: center;
+    	-ms-align-items: center;
+    	align-items: center;
+    }
+
+    .ddd {
+    	display: block;
+	    width: 200px;
+	    height: 100px;
+	    color: #fff;
+	    font-weight: 800;
+	    text-transform: uppercase;
+	    font-size: 24px;
+	    border-radius: 8px;
+	    background: #0396ff;
+	    cursor: pointer;
+    }
+
+    #modal {
+    	position: fixed;
+	    width: 30vw;
+	    flex-direction: column;
+	    height: 30vh;
+	    align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    border: 2px dotted;
+	    background: white;
+    }
+
+    .hidden {
+    	display: none!important;
+    }
+
+    .btn {
+    	margin-top: 16px;
+    	text-decoration: underline;
+    	cursor: pointer;
+    }
+</style>
+
+<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+function test() {
+
+}
+
+$(".ddd").click( function() {
+	$("#modal").removeClass("hidden")
+});
+
+$(".btn").click( function() {
+	var name = "Hello " + $("#modal > input").val()
+	$("#modal > h2").text(name);
+	$(this).addClass("hidden")
+	$("#modal > input").addClass("hidden")
+	
+});
+</script>
+
+
+</body>
+
+</html>

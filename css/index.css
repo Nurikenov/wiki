@@ -1,0 +1,86 @@
+@import url(font.css);
+
+header {
+    border-bottom: 1px solid #000;
+    font-family: Pacifico;
+
+}
+
+aside {
+    border-right: 1px solid #000;
+    height: 100%;
+    font-family: PressStart2P;
+    font-size: 32px;
+}
+
+main {
+    background: #ccc;
+    position: relative;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.btn--call {
+    position: relative;
+    padding-left: 40px;
+    background: #fff;
+    animation: testScale 2s infinite;
+
+}
+
+.btn--call::after {
+    content: 'ggg';
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 7px;
+    z-index: 1;
+    color: red;
+}
+
+.btn--call:hover::after {
+    background: #000;
+    content: 'pppp';
+}
+
+main::after {
+    content: 'xdfsfdsfdsfdsd';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    right: -15%;
+    z-index: -1;
+    background: #ccc;
+}
+
+footer {
+    border-top: 1px solid #000;
+}
+
+.no-gutters {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.nav {}
+
+.nav__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+@keyframes testScale {
+  from {
+    transform: scale(1);
+    }
+  to {
+    transform: scale(1.5);
+  }
+}
